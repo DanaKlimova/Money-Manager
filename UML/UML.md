@@ -31,6 +31,9 @@
 
 ### 1. Добавление чека: <a name="3"> </a>
 
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_cash_vaucher.jpg> Диаграмма активности</a> <br>
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_cash_vaucher.jpg> Диаграмма последовательности</a> 
+
 #### Основной поток:
 <ul>
   <li type="1">Вариант использования начинается, когда пользователь нажимает на кнопку "+" или "-", находящиеся на главном экране.</li> 
@@ -50,6 +53,9 @@
 </ul>
 
 ### 2. Добавление категории: <a name="4"> </a>
+
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_category.jpg> Диаграмма активности</a> <br>
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_category.jpg> Диаграмма последовательности</a> 
 
 #### Основной поток:
 
@@ -72,6 +78,9 @@
 
 ### 3. Изменение цвета: <a name="5"> </a>
 
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_color.jpg> Диаграмма активности</a> <br>
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_color.jpg> Диаграмма последовательности</a> 
+
 #### Основной поток:
 
 <ul>
@@ -86,8 +95,12 @@
 
 ### 4. Изменение шрифта <a name="6"> </a>
 
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_font.jpg> Диаграмма активности</a> <br>
+<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_font.jpg> Диаграмма последовательности</a> 
+
+#### Основной поток:
+
 <ul>
-Основной поток:
   <li type="1">Вариант использования начинается, когда пользователь выбирает пункт «Шрифт» в окне настроек.</li>
   <li type="1">Затем появится окно изменения шрифта, в котором есть список видов и размеров шрифта.</li>
   <li type="1">Пользователь выбирает шрифт и размер шрифта. </li>
