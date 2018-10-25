@@ -19,6 +19,8 @@
  </ul>
  
 ## Основные варианты использования: <a name="1"> </a>
+### Диаграмма прецедентов
+![Диаграмма прецедентов](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Use%20Case.jpg)
 
 |Use Case| Описание | 
 |--|--| 
@@ -27,12 +29,14 @@
 |Изменение цвета | Приложение изменит цвет.|
 |Изменение шрифта| Приложение изменит тип и размер шрифта.|
 
+
 ## Потоки: <a name="2"> </a>
 
 ### 1. Добавление чека: <a name="3"> </a>
-
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_cash_vaucher.jpg> Диаграмма активности</a> <br>
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_cash_vaucher.jpg> Диаграмма последовательности</a> 
+### Диаграмма активности
+![Диаграмма активности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_cash_vaucher.jpg)
+### Диаграмма последовательности
+![Диаграмма последовательности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_cash_vaucher.jpg)
 
 #### Основной поток:
 <ul>
@@ -53,9 +57,10 @@
 </ul>
 
 ### 2. Добавление категории: <a name="4"> </a>
-
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_category.jpg> Диаграмма активности</a> <br>
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_category.jpg> Диаграмма последовательности</a> 
+### Диаграмма активности
+![Диаграмма активности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_add_category.jpg)
+### Диаграмма последовательности
+![Диаграмма последовательности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_add_category.jpg)
 
 #### Основной поток:
 
@@ -77,9 +82,10 @@
 </ul>
 
 ### 3. Изменение цвета: <a name="5"> </a>
-
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_color.jpg> Диаграмма активности</a> <br>
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_color.jpg> Диаграмма последовательности</a> 
+### Диаграмма активности
+![Диаграмма активности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_color.jpg)
+### Диаграмма последовательности
+![Диаграмма последовательности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_color.jpg)
 
 #### Основной поток:
 
@@ -94,9 +100,10 @@
 </ul>
 
 ### 4. Изменение шрифта <a name="6"> </a>
-
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_font.jpg> Диаграмма активности</a> <br>
-<a href=https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_font.jpg> Диаграмма последовательности</a> 
+### Диаграмма активности
+![Диаграмма активности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Activity/Activity_change_font.jpg)
+### Диаграмма последовательности
+![Диаграмма последовательности](https://github.com/DanaKlimova/Money-Manager/blob/master/UML/Sequence/Sequence_change_font.jpg)
 
 #### Основной поток:
 
