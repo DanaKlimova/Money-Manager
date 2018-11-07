@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyManager.Views.SettingsView">
+    <Grid RowSpacing="0" ColumnSpacing="0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1.3*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Чеки-->
+        <Button Grid.Row="3" Grid.Column="0" 
+                Text="Чеки" Clicked="ListOfCashVoucherButton_OnClicked"
+                BackgroundColor="{DynamicResource AppBackground}"
+                BorderColor="{DynamicResource AppBorder}" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BorderWidth="2" 
+                CornerRadius="0"/>
+
+        <!--Главная-->
+        <Button Grid.Row="3" Grid.Column="1" 
+                Text="Главная" Clicked="MainButton_OnClicked"
+                BackgroundColor="{DynamicResource AppBackground}"
+                BorderColor="{DynamicResource AppBorder}" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BorderWidth="2" 
+                CornerRadius="0" 
+                Margin="-2,0,-2,0"/>
+
+        <!--Настройки-->
+        <Button Grid.Row="3" Grid.Column="2" 
+                Text="Настройки" Clicked="SettingsButton_OnClicked"
+                BackgroundColor="{DynamicResource AppBackground}"
+                BorderColor="{DynamicResource AppBorder}" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BorderWidth="2"
+                CornerRadius="0" />
+    </Grid>
+</ContentPage>
