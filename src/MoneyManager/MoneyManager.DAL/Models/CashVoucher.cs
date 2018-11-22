@@ -17,7 +17,12 @@ namespace MoneyManager.DAL.Models
 
         public double Amount { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public List<Category> Categories { get; set; }
+        [ForeignKey(typeof(Category))]
+        public int CategoryId { get; set; }
+
+        //[ManyToOne]
+        //[ForeignKey(typeof(Category))]
+        [ManyToOne]
+        public Category Category { get; set; }
     }
 }

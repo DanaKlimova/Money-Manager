@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MoneyManager"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:controllers="clr-namespace:MoneyManager.Controllers"
              x:Class="MoneyManager.Views.MainView"
              Title="Главная">
 
-    <Grid RowSpacing="0" ColumnSpacing="0" >
+    <Grid RowSpacing="0" ColumnSpacing="0" 
+          BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*" />
             <RowDefinition Height="6*" />
@@ -19,7 +22,66 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="2" Grid.Column="0" ColumnSpan="3">
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               TextColor="Black"
+               BackgroundColor="{DynamicResource AppBackground}"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Style="{DynamicResource LabelFontStyle}"
+               Text="Главная"/>
+
+        <chart:SfChart Grid.Row="1" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="3"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       BindingContext="{Binding}">
+
+            <chart:SfChart.Legend>
+                <chart:ChartLegend IconHeight="25" IconWidth="25" 
+                                   OverflowMode="Wrap" 
+                                   DockPosition="Bottom">
+                    <chart:ChartLegend.LabelStyle>
+                        <chart:ChartLegendLabelStyle Font="Bold,25"/>
+                    </chart:ChartLegend.LabelStyle>
+                </chart:ChartLegend>
+            </chart:SfChart.Legend>
+
+            <chart:SfChart.Series>
+                <chart:DoughnutSeries  ExplodeIndex="{Binding SelectedIndex}" 
+                                       x:Name="doughnutSeries" ItemsSource="{Binding ChartDataList}"
+                                       XBindingPath="Name" YBindingPath="Amount" LegendIcon="Circle"
+                                       EnableAnimation="true" StrokeWidth="1" StrokeColor="White" 
+                                       ExplodeOnTouch="true" EnableDataPointSelection="true">
+                    <chart:DoughnutSeries.DataMarker>
+                        <chart:ChartDataMarker ShowLabel="True">
+                            <chart:ChartDataMarker.LabelStyle>
+                                <chart:DataMarkerLabelStyle FontSize="25" />
+                            </chart:ChartDataMarker.LabelStyle>
+                        </chart:ChartDataMarker>
+                    </chart:DoughnutSeries.DataMarker>
+                    <chart:DoughnutSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Natural" />
+                    </chart:DoughnutSeries.ColorModel>
+                    <chart:DoughnutSeries.CenterView>
+                        <StackLayout x:Name="stack" Orientation ="Vertical" 
+                                     HorizontalOptions="FillAndExpand" 
+                                     VerticalOptions="FillAndExpand">
+                            <Label Text="{Binding BindingContext.SelectedItemName}" TextColor="Black" 
+                                   FontAttributes="Bold" Style="{DynamicResource LabelFontStyle}"
+                                   WidthRequest="80" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding BindingContext.SelectedItemsPercentage,StringFormat='{0}%'}" 
+                                   TextColor="Black" FontAttributes="Bold" 
+                                   Style="{DynamicResource LabelFontStyle}" 
+                                   WidthRequest="60" 
+                                   HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </chart:DoughnutSeries.CenterView>
+                </chart:DoughnutSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+                
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -35,6 +97,7 @@
                    VerticalOptions="Center"/>
         </Grid>
         
+        
         <!--Чеки-->
         <Button Grid.Row="3" Grid.Column="0" 
                 Text="Чеки" Clicked="ListOfCashVoucherButton_OnClicked"
@@ -43,7 +106,9 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2" 
-                CornerRadius="0"/>
+                CornerRadius="0"                
+                Style="{DynamicResource ButtonFontStyle}"
+                />
 
         <!--Главная-->
         <Button Grid.Row="3" Grid.Column="1" 
@@ -54,7 +119,8 @@
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2" 
                 CornerRadius="0" 
-                Margin="-2,0,-2,0"/>
+                Margin="-2,0,-2,0"
+                Style="{DynamicResource ButtonFontStyle}"/>
 
         <!--Настройки-->
         <Button Grid.Row="3" Grid.Column="2" 
@@ -64,7 +130,8 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2"
-                CornerRadius="0" />
+                CornerRadius="0"
+                Style="{DynamicResource ButtonFontStyle}"/>
     </Grid>
 
 </ContentPage>

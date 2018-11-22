@@ -26,7 +26,7 @@ namespace MoneyManager.DAL
         public void AddCashVoucher(CashVoucher cashVoucher)
         {
             _cashVouchers.Add(cashVoucher);
-            _db.Insert(cashVoucher);
+            _db.InsertWithChildren(cashVoucher);
         }
 
         public void AddCategory(Category category)
@@ -43,6 +43,12 @@ namespace MoneyManager.DAL
         public IEnumerable<Category> GetAllCategories()
         {
             return _categories;
+        }
+
+        public Category GetCategoryByName(string name)
+        {
+            //return _categories.FirstOrDefault(x => x.Name == name);
+            return _db.Table<Category>().ToList().FirstOrDefault(x => x.Name == name);
         }
 
         private void GetConnection(string filename)

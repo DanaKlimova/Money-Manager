@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyManager.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,16 @@ namespace MoneyManager.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CashVoucherView : ContentPage
 	{
+        private CashVoucherController _cashVoucherController;
+
 		public CashVoucherView ()
 		{
 			InitializeComponent ();
 
 		    NavigationPage.SetHasNavigationBar(this, false);
+
+            _cashVoucherController = new CashVoucherController();
+            BindingContext = _cashVoucherController;
         }
 
 	    private void ListOfCashVoucherButton_OnClicked(object sender, EventArgs e)

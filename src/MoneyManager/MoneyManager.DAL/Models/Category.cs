@@ -15,7 +15,8 @@ namespace MoneyManager.DAL.Models
         [ForeignKey(typeof(CashVoucher))]
         public int CashVoucherId { get; set; }
 
-        [ManyToOne()]
+        [OneToMany]
+        //[OneToOne]
         public CashVoucher CashVoucher { get; set; }
     }
 }

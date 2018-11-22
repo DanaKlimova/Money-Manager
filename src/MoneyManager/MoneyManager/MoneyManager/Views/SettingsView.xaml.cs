@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,5 +33,21 @@ namespace MoneyManager.Views
 	    private void SettingsButton_OnClicked(object sender, EventArgs e)
 	    {
 	    }
-	}
+
+        private async void ChangeFontButton_OnClicked(object sender, EventArgs e)
+        { 
+                await PopupNavigation.Instance.PushAsync(new ChangeFontView());
+                
+        }
+
+        private void ChangeColorButton_OnClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AboutButton_OnClicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
