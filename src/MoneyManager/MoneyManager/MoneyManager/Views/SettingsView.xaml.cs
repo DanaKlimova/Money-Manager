@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Services;
+﻿using MoneyManager.Models;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,9 @@ namespace MoneyManager.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SettingsView : ContentPage
 	{
-		public SettingsView ()
+        public SettingsView ()
 		{
 			InitializeComponent ();
-            
 		    NavigationPage.SetHasNavigationBar(this, false);
         }
 
@@ -36,8 +36,7 @@ namespace MoneyManager.Views
 
         private async void ChangeFontButton_OnClicked(object sender, EventArgs e)
         { 
-                await PopupNavigation.Instance.PushAsync(new ChangeFontView());
-                
+            await PopupNavigation.Instance.PushAsync(new ChangeFontView());                
         }
 
         private void ChangeColorButton_OnClicked(object sender, EventArgs e)
@@ -45,9 +44,9 @@ namespace MoneyManager.Views
 
         }
 
-        private void AboutButton_OnClicked(object sender, EventArgs e)
+        private async void AboutButton_OnClicked(object sender, EventArgs e)
         {
-
+            await PopupNavigation.Instance.PushAsync(new About());
         }
     }
 }

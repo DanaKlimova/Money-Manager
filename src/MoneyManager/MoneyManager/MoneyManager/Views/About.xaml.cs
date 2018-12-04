@@ -16,6 +16,7 @@ namespace MoneyManager.Views
 	{
         public About()
         {
+            InitializeComponent();
         }
 
         private void OnCloseButtonTapped(object sender, EventArgs e)

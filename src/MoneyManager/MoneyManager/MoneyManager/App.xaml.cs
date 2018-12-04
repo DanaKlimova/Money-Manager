@@ -1,5 +1,6 @@
 ﻿using System;
 using MoneyManager.DAL;
+using MoneyManager.Models;
 using MoneyManager.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,9 @@ namespace MoneyManager
     {
         private static string DatabaseFileName = "db.db";
         private static Database _db;
+        public static CustomFontSize customFontSize;
+        public static CustomFontSize CustomFontSize { get => customFontSize; set => customFontSize = value; }
+
 
         public static Database Database
         {
@@ -29,7 +33,10 @@ namespace MoneyManager
         {
             InitializeComponent();
 
+            CustomFontSize = new CustomFontSize();
             MainPage = new NavigationPage(new MainView());
+			BindingContext = CustomFontSize;
+			//Recource["AppBorder"] = "#fff";
         }
 
         protected override void OnStart()

@@ -35,7 +35,7 @@
                        Grid.ColumnSpan="3"
                        HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
-                       BindingContext="{Binding}">
+                       >
 
             <chart:SfChart.Legend>
                 <chart:ChartLegend IconHeight="25" IconWidth="25" 

@@ -7,19 +7,19 @@
             <Color x:Key="AppBackground">#d05bff</Color>
             <Color x:Key="AppBorder">#5c2572</Color>
             <Style x:Key="LabelFontStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="{Binding FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
             <Style x:Key="ButtonFontStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="Black"/>
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="{Binding FontSize}"/>
             </Style>
             <Style x:Key="EntryFontStyle" TargetType="Entry">
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="{Binding FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
             <Style x:Key="PickerFontStyle" TargetType="Picker">
-                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontSize" Value="{Binding FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
         </ResourceDictionary>

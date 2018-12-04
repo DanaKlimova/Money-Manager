@@ -1,5 +1,6 @@
 ﻿using MoneyManager.Controllers;
 using MoneyManager.DAL.Models;
+using MoneyManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,7 +16,8 @@ namespace MoneyManager.Views
         public MainView()
         {
             InitializeComponent();
-            
+
+
             MinusImage.GestureRecognizers.Add(new TapGestureRecognizer()
             {
                 Command = new Command(MinusTap)
