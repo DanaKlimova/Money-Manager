@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MoneyManager.Views.SettingsView">
-    <Grid RowSpacing="0" ColumnSpacing="0" >
+    <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*" />
             <RowDefinition Height="*" />

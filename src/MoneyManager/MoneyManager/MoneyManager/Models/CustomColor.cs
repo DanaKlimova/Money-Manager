@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -11,8 +12,8 @@ namespace MoneyManager.Models
     public class CustomColor : System.ComponentModel.INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private Color _backgroundColor;
-        public Color BackgroundColor
+        private Xamarin.Forms.Color _backgroundColor;
+        public Xamarin.Forms.Color BackgroundColor
         {
             get { return _backgroundColor; }
             set
@@ -22,8 +23,8 @@ namespace MoneyManager.Models
             }
         }
 
-        private Color _borderColor;
-        public Color BorderColor
+        private Xamarin.Forms.Color _borderColor;
+        public Xamarin.Forms.Color BorderColor
         {
             get { return _borderColor; }
             set
@@ -35,8 +36,13 @@ namespace MoneyManager.Models
 
         public void Init()
         {
-            BackgroundColor = Color.FromHex("#D05BFF");
-            BorderColor = Color.FromHex("#5c2572");
+            BackgroundColor = new Xamarin.Forms.Color();
+            //BackgroundColor = Resources["AppBackground"];
+            BackgroundColor = Xamarin.Forms.Color.FromHex("#d05bff");
+            BorderColor = new Xamarin.Forms.Color();
+            BackgroundColor = Xamarin.Forms.Color.FromHex("#5c2572");
+            
+            //BorderColor = Resources["AppBorder"];
         }
         
 
@@ -51,44 +57,44 @@ namespace MoneyManager.Models
             {
                 case 0: //красный
                     {
-                    BackgroundColor = Color.FromHex("#ea422c");
-                    BorderColor = Color.FromHex("#a3392c");
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#ea422c");
+                    BorderColor = Xamarin.Forms.Color.FromHex("#a3392c");
                     break;
                 }
                 case 1: //оранжевый
                     {
-                    BackgroundColor = Color.FromHex("#f2862e");
-                    BorderColor = Color.FromHex("#b75607");
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#f2862e");
+                    BorderColor = Xamarin.Forms.Color.FromHex("#b75607");
                     break;
                 }
                 case 2: //желтый
                     {
-                    BackgroundColor = Color.FromHex("#f4ee44");
-                    BorderColor = Color.FromHex("#a8a328");
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#f4ee44");
+                    BorderColor = Xamarin.Forms.Color.FromHex("#a8a328");
                     break;
                 }
                 case 3: //зеленый
                     {
-                    BackgroundColor = Color.FromHex("#1ab243"); ;
-                    BorderColor = Color.FromHex("#177c33"); ;
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#1ab243"); ;
+                    BorderColor = Xamarin.Forms.Color.FromHex("#177c33"); ;
                     break;
                 }
                 case 4: //голубой
                     {
-                    BackgroundColor = Color.FromHex("#31c7ed"); ;
-                    BorderColor = Color.FromHex("#1d778e"); ;
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#31c7ed"); ;
+                    BorderColor = Xamarin.Forms.Color.FromHex("#1d778e"); ;
                     break;
                 }
                 case 5: //синий
                     {
-                    BackgroundColor = Color.FromHex("#1e29ed"); ;
-                    BorderColor = Color.FromHex("#222784"); ;
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#1e29ed"); ;
+                    BorderColor = Xamarin.Forms.Color.FromHex("#222784"); ;
                     break;
                 }
                 case 6: //фиолетовый
                     {
-                    BackgroundColor = Color.FromHex("#D05BFF");
-                    BorderColor = Color.FromHex("#5c2572");
+                    BackgroundColor = Xamarin.Forms.Color.FromHex("#D05BFF");
+                    BorderColor = Xamarin.Forms.Color.FromHex("#5c2572");
                     break;
                 }
             }

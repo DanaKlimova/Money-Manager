@@ -39,7 +39,15 @@ namespace MoneyManager
             CustomColor = new CustomColor();
             CustomColor.PropertyChanged += CustomColor_PropertyChanged;
             CustomColor.Init();
-            MainPage = new NavigationPage(new MainView());
+            try
+            {
+                MainPage = new NavigationPage(new MainView());
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
         }
 
         private void CustomFontSize_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -30,7 +30,6 @@ namespace MoneyManager.Views
             NavigationPage.SetHasNavigationBar(this, false);
             _mainController = new MainController();
             BindingContext = _mainController;
-            Resources["FontSize"] = 21.3;
         }
 
         protected override void OnAppearing()
