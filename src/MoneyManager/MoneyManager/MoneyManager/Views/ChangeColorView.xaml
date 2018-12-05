@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    x:Class="MoneyManager.Views.ChangeFontView">
+    x:Class="MoneyManager.Views.ChangeColorView">
 
     <ScrollView
         HorizontalOptions="Center"
@@ -19,21 +19,25 @@
                     IsClippedToBounds="False"
                     Padding="10, 5"
                     Spacing="3">
-                    <Label Text="Выберите размер шрифта"
+                    <Label Text="Выберите Цвет"
                            HorizontalOptions="Center"
                            Style="{DynamicResource LabelFontStyle}"/>
 
-                    <Picker x:Name="FontSizePicker"             
+                    <Picker x:Name="ColorPicker"             
                     VerticalOptions="Center"
                     HorizontalOptions="FillAndExpand"
                     Style="{DynamicResource PickerFontStyle}">
                         <Picker.Items>
-                            <x:String>Маленький</x:String>
-                            <x:String>Средний</x:String>
-                            <x:String>Большой</x:String>
+                            <x:String>Красный</x:String>
+                            <x:String>Оранжевй</x:String>
+                            <x:String>Желтый</x:String>
+                            <x:String>Зеленый</x:String>
+                            <x:String>Голубой</x:String>
+                            <x:String>Синий</x:String>
+                            <x:String>Фиолетовый</x:String>
                         </Picker.Items>
                     </Picker>
-                    <Button Text="Изменить" Clicked="ChangeFontSizeButton_OnClicked"
+                    <Button Text="Изменить" Clicked="ChangeColorButton_OnClicked"
                         BackgroundColor="{DynamicResource AppBackground}"
                         BorderColor="{DynamicResource AppBorder}" 
                         HorizontalOptions="FillAndExpand"

@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MoneyManager.Models
 {
-    public class CustomFontSize :INotifyPropertyChanged
+    public class CustomFontSize : INotifyPropertyChanged
     {
         private double _fontSize;
         public double FontSize {
@@ -19,7 +19,7 @@ namespace MoneyManager.Models
             }
         }
 
-        public CustomFontSize()
+        public void Init()
         {
             FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Element));
         }

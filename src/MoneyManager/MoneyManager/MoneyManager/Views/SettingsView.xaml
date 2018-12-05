@@ -30,7 +30,7 @@
                 Text="Цвет" Clicked="ChangeColorButton_OnClicked"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                BorderWidth="2" 
+                BorderWidth="0" 
                 CornerRadius="0"
                 BackgroundColor="White"
                 Style="{DynamicResource ButtonFontStyle}"/>
@@ -39,7 +39,7 @@
                 Text="Шрифт" Clicked="ChangeFontButton_OnClicked"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                BorderWidth="2" 
+                BorderWidth="0" 
                 CornerRadius="0"
                 BackgroundColor="White"
                 Style="{DynamicResource ButtonFontStyle}"/>
@@ -48,7 +48,7 @@
                 Text="О программе" Clicked="AboutButton_OnClicked"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                BorderWidth="2" 
+                BorderWidth="0" 
                 CornerRadius="0"
                 BackgroundColor="White"
                 Style="{DynamicResource ButtonFontStyle}"/>

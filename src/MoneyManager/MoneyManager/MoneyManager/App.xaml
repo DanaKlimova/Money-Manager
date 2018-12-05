@@ -4,22 +4,25 @@
              x:Class="MoneyManager.App">
     <Application.Resources>
         <ResourceDictionary>
+            <x:Double x:Key="FontSize">20</x:Double>
             <Color x:Key="AppBackground">#d05bff</Color>
             <Color x:Key="AppBorder">#5c2572</Color>
             <Style x:Key="LabelFontStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
             <Style x:Key="ButtonFontStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="Black"/>
-                <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource AppBackground}"/>
+                <Setter Property="BorderColor" Value="{DynamicResource AppBorder}"/>
             </Style>
             <Style x:Key="EntryFontStyle" TargetType="Entry">
-                <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
             <Style x:Key="PickerFontStyle" TargetType="Picker">
-                <Setter Property="FontSize" Value="{Binding FontSize}"/>
+                <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
                 <Setter Property="TextColor" Value="Black"/>
             </Style>
         </ResourceDictionary>

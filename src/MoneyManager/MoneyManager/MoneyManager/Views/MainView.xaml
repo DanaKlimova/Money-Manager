@@ -27,7 +27,7 @@
                BackgroundColor="{DynamicResource AppBackground}"
                HorizontalOptions="FillAndExpand"
                VerticalOptions="FillAndExpand"
-               Style="{DynamicResource LabelFontStyle}"
+               FontSize="{DynamicResource FontSize}"
                Text="Главная"/>
 
         <chart:SfChart Grid.Row="1" 
@@ -35,7 +35,7 @@
                        Grid.ColumnSpan="3"
                        HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
-                       >
+                       BindingContext="{Binding .}">
 
             <chart:SfChart.Legend>
                 <chart:ChartLegend IconHeight="25" IconWidth="25" 
@@ -68,11 +68,11 @@
                                      HorizontalOptions="FillAndExpand" 
                                      VerticalOptions="FillAndExpand">
                             <Label Text="{Binding BindingContext.SelectedItemName}" TextColor="Black" 
-                                   FontAttributes="Bold" Style="{DynamicResource LabelFontStyle}"
+                                   FontAttributes="Bold" FontSize="{DynamicResource FontSize}"
                                    WidthRequest="80" HorizontalTextAlignment="Center"/>
                             <Label Text="{Binding BindingContext.SelectedItemsPercentage,StringFormat='{0}%'}" 
                                    TextColor="Black" FontAttributes="Bold" 
-                                   Style="{DynamicResource LabelFontStyle}" 
+                                   FontSize="{DynamicResource FontSize}" 
                                    WidthRequest="60" 
                                    HorizontalTextAlignment="Center"/>
                         </StackLayout>
@@ -107,7 +107,7 @@
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2" 
                 CornerRadius="0"                
-                Style="{DynamicResource ButtonFontStyle}"
+                FontSize="{DynamicResource FontSize}"
                 />
 
         <!--Главная-->
@@ -120,7 +120,7 @@
                 BorderWidth="2" 
                 CornerRadius="0" 
                 Margin="-2,0,-2,0"
-                Style="{DynamicResource ButtonFontStyle}"/>
+                FontSize="{DynamicResource FontSize}"/>
 
         <!--Настройки-->
         <Button Grid.Row="3" Grid.Column="2" 
@@ -131,7 +131,7 @@
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2"
                 CornerRadius="0"
-                Style="{DynamicResource ButtonFontStyle}"/>
+                FontSize="{DynamicResource FontSize}"/>
     </Grid>
 
 </ContentPage>

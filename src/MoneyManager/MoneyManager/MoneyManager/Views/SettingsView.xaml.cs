@@ -39,9 +39,9 @@ namespace MoneyManager.Views
             await PopupNavigation.Instance.PushAsync(new ChangeFontView());                
         }
 
-        private void ChangeColorButton_OnClicked(object sender, EventArgs e)
+        private async void ChangeColorButton_OnClicked(object sender, EventArgs e)
         {
-
+            await PopupNavigation.Instance.PushAsync(new ChangeColorView());
         }
 
         private async void AboutButton_OnClicked(object sender, EventArgs e)

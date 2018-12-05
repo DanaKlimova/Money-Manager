@@ -12,9 +12,9 @@ namespace MoneyManager
     {
         private static string DatabaseFileName = "db.db";
         private static Database _db;
-        public static CustomFontSize customFontSize;
-        public static CustomFontSize CustomFontSize { get => customFontSize; set => customFontSize = value; }
 
+        public static CustomFontSize CustomFontSize { get; private set; }
+        public static CustomColor CustomColor { get; private set; }
 
         public static Database Database
         {
@@ -34,9 +34,32 @@ namespace MoneyManager
             InitializeComponent();
 
             CustomFontSize = new CustomFontSize();
+            CustomFontSize.PropertyChanged += CustomFontSize_PropertyChanged;
+            CustomFontSize.Init();
+            CustomColor = new CustomColor();
+            CustomColor.PropertyChanged += CustomColor_PropertyChanged;
+            CustomColor.Init();
             MainPage = new NavigationPage(new MainView());
-			BindingContext = CustomFontSize;
-			//Recource["AppBorder"] = "#fff";
+        }
+
+        private void CustomFontSize_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(CustomFontSize.FontSize))
+            {
+                Resources["FontSize"] = CustomFontSize.FontSize;
+            }
+        }
+
+        private void CustomColor_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(CustomColor.BackgroundColor))
+            {
+                Resources["AppBackground"] = CustomColor.BackgroundColor;
+            }
+            if (e.PropertyName == nameof(CustomColor.BorderColor))
+            {
+                Resources["AppBorder"] = CustomColor.BorderColor;
+            }
         }
 
         protected override void OnStart()

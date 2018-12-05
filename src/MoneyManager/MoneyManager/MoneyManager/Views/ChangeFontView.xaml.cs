@@ -15,30 +15,6 @@ namespace MoneyManager.Views
             InitializeComponent();
         }
 
-        private void FontSizePicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (FontSizePicker.SelectedIndex)
-            {
-                case 0:
-                    {
-                        App.CustomFontSize.ToSmall();
-                        break;
-                    }
-                case 1:
-                    {
-                        App.CustomFontSize.ToMedium();
-                        break;
-                    }
-                case 2:
-                    {
-                        App.CustomFontSize.ToLarge();
-                        break;
-                    }
-            }
-            
-            CloseAllPopup();
-        }
-
         private void OnCloseButtonTapped(object sender, EventArgs e)
         {
             CloseAllPopup();
@@ -54,6 +30,30 @@ namespace MoneyManager.Views
         private async void CloseAllPopup()
         {
             await PopupNavigation.Instance.PopAllAsync();
+        }
+
+        private void ChangeFontSizeButton_OnClicked(object sender, EventArgs e)
+        {
+            switch (FontSizePicker.SelectedIndex)
+            {
+                case 0:
+                    {
+                        //Resources["FontSize"] = 21.3;                        
+                        App.CustomFontSize.ToSmall();
+                        break;
+                    }
+                case 1:
+                    {
+                        App.CustomFontSize.ToMedium();
+                        break;
+                    }
+                case 2:
+                    {
+                        App.CustomFontSize.ToLarge();
+                        break;
+                    }
+            }
+            CloseAllPopup();
         }
     }
 }

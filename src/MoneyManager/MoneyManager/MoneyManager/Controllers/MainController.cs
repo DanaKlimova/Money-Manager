@@ -86,7 +86,7 @@ namespace MoneyManager.Controllers
                     .Sum(c => c.Amount) });
 
             }
-
+            
             ChartDataList = new ObservableCollection<ChartData>(list);
         }
 
