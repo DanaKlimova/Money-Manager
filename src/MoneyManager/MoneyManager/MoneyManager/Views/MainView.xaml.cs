@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace MoneyManager.Views
 {
@@ -14,9 +15,8 @@ namespace MoneyManager.Views
         private readonly MainController _mainController;
 
         public MainView()
-        {
+        {          
             InitializeComponent();
-
 
             MinusImage.GestureRecognizers.Add(new TapGestureRecognizer()
             {

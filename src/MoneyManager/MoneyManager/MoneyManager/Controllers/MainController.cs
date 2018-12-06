@@ -12,7 +12,7 @@ namespace MoneyManager.Controllers
     public class MainController : INotifyPropertyChanged
     {
         private ObservableCollection<ChartData> _chartDataList;
-        private int _selectedIndex;
+        private int _selectedIndex = -1;
         private string _selectedItemName;
         private double _selectedItemsPercentage;
 

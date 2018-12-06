@@ -34,14 +34,15 @@
                        Grid.Column="0" 
                        Grid.ColumnSpan="3"
                        HorizontalOptions="FillAndExpand"
-                       VerticalOptions="FillAndExpand">
+                       VerticalOptions="FillAndExpand"
+                       BindingContext="{Binding .}">
 
             <chart:SfChart.Legend>
                 <chart:ChartLegend IconHeight="25" IconWidth="25" 
                                    OverflowMode="Wrap" 
                                    DockPosition="Bottom">
                     <chart:ChartLegend.LabelStyle>
-                        <chart:ChartLegendLabelStyle Font="Bold,25"/>
+                        <chart:ChartLegendLabelStyle FontSize="{DynamicResource FontSize}"/>
                     </chart:ChartLegend.LabelStyle>
                 </chart:ChartLegend>
             </chart:SfChart.Legend>
@@ -55,7 +56,7 @@
                     <chart:DoughnutSeries.DataMarker>
                         <chart:ChartDataMarker ShowLabel="True">
                             <chart:ChartDataMarker.LabelStyle>
-                                <chart:DataMarkerLabelStyle FontSize="25" />
+                                <chart:DataMarkerLabelStyle FontSize="{DynamicResource FontSize}" />
                             </chart:ChartDataMarker.LabelStyle>
                         </chart:ChartDataMarker>
                     </chart:DoughnutSeries.DataMarker>
@@ -106,8 +107,7 @@
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2" 
                 CornerRadius="0"                
-                FontSize="{DynamicResource FontSize}"
-                />
+                Style="{DynamicResource ButtonFontStyle}"/>
 
         <!--Главная-->
         <Button Grid.Row="3" Grid.Column="1" 
@@ -119,7 +119,7 @@
                 BorderWidth="2" 
                 CornerRadius="0" 
                 Margin="-2,0,-2,0"
-                FontSize="{DynamicResource FontSize}"/>
+                Style="{DynamicResource ButtonFontStyle}"/>
 
         <!--Настройки-->
         <Button Grid.Row="3" Grid.Column="2" 
@@ -130,7 +130,7 @@
                 VerticalOptions="FillAndExpand"
                 BorderWidth="2"
                 CornerRadius="0"
-                FontSize="{DynamicResource FontSize}"/>
+                Style="{DynamicResource ButtonFontStyle}"/>
     </Grid>
 
 </ContentPage>

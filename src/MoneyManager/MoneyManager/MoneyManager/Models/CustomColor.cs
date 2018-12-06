@@ -40,7 +40,7 @@ namespace MoneyManager.Models
             //BackgroundColor = Resources["AppBackground"];
             BackgroundColor = Xamarin.Forms.Color.FromHex("#d05bff");
             BorderColor = new Xamarin.Forms.Color();
-            BackgroundColor = Xamarin.Forms.Color.FromHex("#5c2572");
+            BorderColor = Xamarin.Forms.Color.FromHex("#5c2572");
             
             //BorderColor = Resources["AppBorder"];
         }
