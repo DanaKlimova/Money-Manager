@@ -23,7 +23,7 @@
                        HorizontalOptions="FillAndExpand"
                        VerticalOptions="FillAndExpand"
                        Style="{DynamicResource LabelFontStyle}"
-                       Text="Разработчик - Дана Климова,\n почта - danonklimova@gmail.com\nВерсия - 1.0"/>    
+                       Text="Разработчик - Дана Климова, почта - danonklimova@gmail.com, версия - 1.0"/>    
                 </StackLayout>
             </Frame>
             <ContentView

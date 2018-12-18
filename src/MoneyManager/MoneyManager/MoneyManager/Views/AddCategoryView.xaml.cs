@@ -41,17 +41,27 @@ namespace MoneyManager.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            var category = CategoryEntry.Text;
-            if (!String.IsNullOrEmpty(category.Trim()))
+            var check = CategoryEntry.Text;
+            if (CategoryEntry.Text != null)
             {
-                App.Database.AddCategory(new DAL.Models.Category()
+                var category = CategoryEntry.Text;
+                if (!String.IsNullOrEmpty(category.Trim()))
                 {
-                    Name = category
-                });
-                _addCategory(category);
+                    App.Database.AddCategory(new DAL.Models.Category()
+                    {
+                        Name = category
+                    });
+                    _addCategory(category);
+                }
+                DisplayAlert("", "Категория добавлена", "ОK");
+                CloseAllPopup();
             }
-            DisplayAlert("", "Категория добавлена", "ОK");
-            CloseAllPopup();
+            else
+            {
+                DisplayAlert("", "Данные введены некорректно", "ОK");
+                CloseAllPopup();
+            }
+
         }
     }
 }

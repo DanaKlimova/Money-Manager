@@ -75,7 +75,8 @@ namespace MoneyManager.Controllers
 
         public void AddCategory(string category)
         {
-            _categoryList.Add(category);
+           _categoryList.Add(category);
+           //_categoryList.Insert(0, category);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -97,6 +98,7 @@ namespace MoneyManager.Controllers
                 _categoryList.Add(category.Name);
             }
             _categoryList.Add("Добавить категорию");
+            //_categoryList.Reverse();
         }
     }
 }

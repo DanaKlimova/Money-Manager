@@ -28,14 +28,14 @@ namespace MoneyManager.Views
             CategoryPicker.SelectedIndex = 0;
         }
 
-        private async void CategoryPicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void CategoryPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (sender is Picker picker)
             {
                 var item = picker.Items[picker.SelectedIndex];
                 if (item == "Добавить категорию")
                 {
-                    await PopupNavigation.Instance.PushAsync(new AddCategoryView(_addCashVoucherController.AddCategory));
+                    PopupNavigation.Instance.PushAsync(new AddCategoryView(_addCashVoucherController.AddCategory));
                 }
             }
         }
